@@ -4,7 +4,7 @@
 #include <LiquidCrystal_I2C.h>  //i2C LCD Library
 
 //Define your LCD 16x2 or 20x4
-LiquidCrystal_I2C lcd( 20, 4);
+LiquidCrystal_I2C lcd(20, 4);
 
 uint32_t targetTime = 0;
 uint8_t conv2d(const char* p) {
@@ -25,10 +25,8 @@ void setup()
  //Aktifkan serial jika ingin melihat notifikasi di Serial monitor
  //Serial.begin (9600);  
 
- //auto set i2c lcd address
- lcd.autoAddress();
  //memulai lcd
- lcd.begin();
+ lcd.autoBegin();
 
 }
 

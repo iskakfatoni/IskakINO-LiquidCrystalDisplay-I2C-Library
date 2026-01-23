@@ -5,12 +5,12 @@
 #include <Wire.h> 
 #include <LiquidCrystal_I2C.h>
 
-// Set the LCD address to 0x27 for a 16 chars and 2 line display
-LiquidCrystal_I2C lcd(0x27, 16, 2);
+// Set the LCD to for a 16 chars and 2 line display
+LiquidCrystal_I2C lcd(16, 2);
 
 void setup()
 {
-	lcd.begin();
+	lcd.autoBegin();
 	lcd.backlight();
   
 	// Initialize the serial port at a speed of 9600 baud

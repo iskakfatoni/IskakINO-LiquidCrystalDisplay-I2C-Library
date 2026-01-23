@@ -1,6 +1,3 @@
-//#include <ESP8266WiFi.h>
-//#include <Wire.h>  // needed if you use esp8266
-
 #include <LiquidCrystal_I2C.h>  //i2C LCD Library
 
 //Define your LCD 16x2 or 20x4
@@ -13,10 +10,8 @@ void setup()
  Serial.begin (9600);  
 
  //auto set i2c lcd address
- lcd.autoAddress();
- //memulai lcd
- lcd.begin();
-
+ lcd.autoBegin();
+ 
 }
 
 void loop()
@@ -26,7 +21,8 @@ void loop()
 
 
 void lcdTest () 
-{  lcd.print("Hello, world!");
+{ 
+  lcd.print("Hello, world!");
   delay (1000);
   lcd.setCursor(0,1);
   lcd.print("Test Backlight  ");
