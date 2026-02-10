@@ -133,6 +133,14 @@ void LiquidCrystal_I2C::noBlink() {
     _command(LCD_DISPLAYCONTROL | _displaycontrol);
 }
 
+void LiquidCrystal_I2C::scrollDisplayLeft() {
+    _command(LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVELEFT);
+}
+
+void LiquidCrystal_I2C::scrollDisplayRight() {
+    _command(LCD_CURSORSHIFT | LCD_DISPLAYMOVE | LCD_MOVERIGHT);
+}
+
 /* =========================================================
    Low-level command handling
    ========================================================= */
