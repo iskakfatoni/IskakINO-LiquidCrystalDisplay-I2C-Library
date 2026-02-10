@@ -25,6 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ### Fixed
 - Improved I2C initialization stability
 - Reliable 4-bit LCD initialization sequence
-
+- Initial stable release of IskakINO_LiquidCrystal_I2C
 ---
 
