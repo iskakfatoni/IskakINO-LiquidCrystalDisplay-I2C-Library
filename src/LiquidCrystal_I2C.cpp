@@ -113,6 +113,26 @@ size_t LiquidCrystal_I2C::write(uint8_t value) {
     return 1;
 }
 
+void LiquidCrystal_I2C::cursor() {
+    _displaycontrol |= LCD_CURSORON;
+    _command(LCD_DISPLAYCONTROL | _displaycontrol);
+}
+
+void LiquidCrystal_I2C::noCursor() {
+    _displaycontrol &= ~LCD_CURSORON;
+    _command(LCD_DISPLAYCONTROL | _displaycontrol);
+}
+
+void LiquidCrystal_I2C::blink() {
+    _displaycontrol |= LCD_BLINKON;
+    _command(LCD_DISPLAYCONTROL | _displaycontrol);
+}
+
+void LiquidCrystal_I2C::noBlink() {
+    _displaycontrol &= ~LCD_BLINKON;
+    _command(LCD_DISPLAYCONTROL | _displaycontrol);
+}
+
 /* =========================================================
    Low-level command handling
    ========================================================= */
