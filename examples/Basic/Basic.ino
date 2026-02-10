@@ -1,33 +1,18 @@
 /*
-  =========================================================
-  Basic Example
-  IskakINO_LiquidCrystal_I2C v1.0.0
-  =========================================================
+  Basic.ino - Basic LCD I2C example
 
-  LCD Type  : HD44780 + I2C Backpack (PCF8574)
-  LCD Size  : 16x2 (adjustable)
+  Demonstrates basic usage of IskakINO_LiquidCrystal_I2C library.
+  This example initializes the LCD, turns on the backlight,
+  and displays static text.
 
-  ---------------------------------------------------------
-  WIRING
-  ---------------------------------------------------------
-  LCD I2C      Arduino UNO / NANO      ESP32
-  ---------------------------------------------------------
-  GND     -->  GND                     GND
-  VCC     -->  5V                      5V / 3V3*
-  SDA     -->  A4                      GPIO 21
-  SCL     -->  A5                      GPIO 22
+  Compatible with Arduino, ESP8266, ESP32.
 
-  * Use 5V if your I2C module supports it.
-    Most PCF8574 boards work on 3.3V logic (ESP32 safe).
-
-  ---------------------------------------------------------
-  FEATURES
-  ---------------------------------------------------------
-  - Auto I2C address scan (0x20 – 0x27)
-  - No manual address needed
-  - Compatible with Arduino & ESP32
-  - Lightweight & low RAM usage
+  Library  : IskakINO_LiquidCrystal_I2C
+  Version  : 1.0.0
+  Author   : Iskak Fatoni
+  License  : MIT
 */
+
 
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
