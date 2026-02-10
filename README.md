@@ -145,25 +145,58 @@ Or using auto-detect mode:
 
 LiquidCrystal_I2C lcd(columns, rows);
 
-### ✅ Supported Methods:
-- print(), setCursor(), clear(), home()  
-- cursor(), noCursor()  
-- blink(), noBlink()  
-- scrollDisplayLeft(), scrollDisplayRight()  
-- autoscroll(), noAutoscroll()  
-- leftToRight(), rightToLeft()  
-- createChar() (custom character / CGRAM)
+## 🧩 Supported Hardware
+
+This library supports HD44780 LCDs with I2C backpack (PCF8574 / PCF8574A) and popular microcontrollers:
+
+| Board / MCU | Notes |
+|------------|-------|
+| Arduino UNO / Nano / Mega | Standard 5V logic, default I2C pins: SDA/A4, SCL/A5 (Mega varies) |
+| ESP32 / ESP32 DevKit | 3.3V logic, default I2C pins: SDA = GPIO21, SCL = GPIO22 |
+| ESP32-C3 | 3.3V logic, default I2C pins: SDA = GPIO20, SCL = GPIO21 |
+| NodeMCU (ESP8266) | 3.3V logic, default I2C pins: SDA = D2 (GPIO4), SCL = D1 (GPIO5) |
+
+---
+
+## 📦 Installation
+
+### Arduino IDE Library Manager
+1. Open **Arduino IDE**  
+2. Sketch → Include Library → **Manage Libraries**  
+3. Search for **IskakINO_LiquidCrystal_I2C**  
+4. Click **Install**
+
+### Manual Installation (ZIP)
+1. Download this repository as ZIP  
+2. Arduino IDE → Sketch → Include Library → **Add .ZIP Library**
+
+---
+
+## 🔌 Wiring
+
+Connect your HD44780 LCD with I2C backpack to your board as follows:
+
+| LCD I2C Pin | Arduino / ESP32 | ESP32-C3 | NodeMCU (ESP8266) |
+|------------|----------------|-----------|------------------|
+| SDA        | SDA             | GPIO20    | D2 (GPIO4)       |
+| SCL        | SCL             | GPIO21    | D1 (GPIO5)       |
+| VCC        | 5V (or 3.3V)   | 3.3V      | 3.3V             |
+| GND        | GND             | GND       | GND              |
+
+> **Notes:**  
+> - Arduino default: SDA/A4, SCL/A5 (Mega varies)  
+> - ESP32 default: SDA = GPIO21, SCL = GPIO22 (can be changed using `Wire.begin(SDA, SCL);`)  
+> - ESP32-C3 default: SDA = GPIO20, SCL = GPIO21 (can be changed using `Wire.begin()`)  
+> - NodeMCU default: SDA = D2 (GPIO4), SCL = D1 (GPIO5)  
+> - Make sure VCC voltage matches your LCD and I2C backpack (3.3V for ESP32 / ESP32-C3 / NodeMCU, 5V for Arduino)  
 
 ⚠️ **Note:**  
 Legacy API calls remain fully functional.
 
 
 ## 🏷 Versioning
-
 This library uses **Semantic Versioning**:
-
 MAJOR.MINOR.PATCH
-
 ### 📌 Current Version
 - **v1.0.0**
   - Initial stable release  
