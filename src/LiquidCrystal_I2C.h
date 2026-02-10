@@ -83,6 +83,11 @@
 #define LCD_5x10DOTS  0x04
 #define LCD_5x8DOTS   0x00
 
+// Cursor / Display Shift Flags
+#define LCD_DISPLAYMOVE 0x08
+#define LCD_CURSORMOVE  0x00
+#define LCD_MOVERIGHT   0x04
+#define LCD_MOVELEFT    0x00
 
 /* =========================================================
    Class
@@ -105,6 +110,8 @@ public:
     void noCursor();
     void blink();
     void noBlink();
+    void scrollDisplayLeft();
+    void scrollDisplayRight();
 
     void setAddress(uint8_t addr);   // 🔧 NEW (optional)
     uint8_t getAddress();            // 🔧 NEW (optional)
