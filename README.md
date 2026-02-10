@@ -56,5 +56,6 @@ This library includes several ready-to-use examples to help you get started quic
   - Use custom SDA and SCL pins on ESP32 by initializing `Wire` manually.
 - **Advanced_NonBlocking_Dashboard**  
   - Demonstrates non-blocking LCD updates using `millis()`, partial screen refresh, and real-world dashboard layout.
+
 You can access these examples from Arduino IDE:
 
