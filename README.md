@@ -38,3 +38,23 @@ void setup() {
 
 void loop() {
 }
+```
+
+---
+
+## More Examples
+This library includes several ready-to-use examples to help you get started quickly:
+- **Basic**
+  - Initialize the LCD and display static text.
+- **SetAddress**
+  - Manually set the I2C address (useful if you already know the LCD address).
+- **Backlight**
+  - Turn LCD backlight ON and OFF.
+- **CursorDisplay**
+  - Control LCD visibility using `display()` and `noDisplay()`.
+- **ESP32_I2C_CustomPins**
+  - Use custom SDA and SCL pins on ESP32 by initializing `Wire` manually.
+
+You can access these examples from Arduino IDE:
+
+

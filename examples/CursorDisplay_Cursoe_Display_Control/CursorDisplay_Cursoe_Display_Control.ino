@@ -1,3 +1,15 @@
+/*
+  CursorDisplay.ino - Display control example
+
+  Demonstrates display() and noDisplay() functions
+  to control LCD visibility without clearing content.
+
+  Library  : IskakINO_LiquidCrystal_I2C
+  Version  : 1.0.0
+  Author   : Iskak Fatoni
+  License  : MIT
+*/
+
 #include <LiquidCrystal_I2C.h>
 
 LiquidCrystal_I2C lcd(16, 2);
