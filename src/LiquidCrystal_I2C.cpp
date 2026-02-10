@@ -175,6 +175,26 @@ void LiquidCrystal_I2C::_expanderWrite(uint8_t data) {
     Wire.endTransmission();
 }
 
+void LiquidCrystal_I2C::leftToRight() {
+    _displaymode |= LCD_ENTRYLEFT;
+    _command(LCD_ENTRYMODESET | _displaymode);
+}
+
+void LiquidCrystal_I2C::rightToLeft() {
+    _displaymode &= ~LCD_ENTRYLEFT;
+    _command(LCD_ENTRYMODESET | _displaymode);
+}
+
+void LiquidCrystal_I2C::autoscroll() {
+    _displaymode |= LCD_ENTRYSHIFTINCREMENT;
+    _command(LCD_ENTRYMODESET | _displaymode);
+}
+
+void LiquidCrystal_I2C::noAutoscroll() {
+    _displaymode &= ~LCD_ENTRYSHIFTINCREMENT;
+    _command(LCD_ENTRYMODESET | _displaymode);
+}
+
 /* =========================================================
    I2C Address Auto Scan
    ========================================================= */
