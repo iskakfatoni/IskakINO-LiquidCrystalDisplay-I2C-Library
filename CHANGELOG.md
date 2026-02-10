@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Compile-time configuration options
 - Optional serial debug support
 - Basic example sketch with wiring reference
+- Added full LiquidCrystal compatible APIs
+- Added cursor, blink, scroll, autoscroll support
+- Added missing HD44780 command macros
+
 
 ### Changed
 - Clean internal refactor for lower RAM and flash usage
