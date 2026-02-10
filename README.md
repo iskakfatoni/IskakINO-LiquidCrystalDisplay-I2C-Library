@@ -57,4 +57,9 @@ This library includes several ready-to-use examples to help you get started quic
 
 You can access these examples from Arduino IDE:
 
+## 📚 More Examples
+
+- **Advanced_NonBlocking_Dashboard**  
+  Demonstrates non-blocking LCD updates using `millis()`,  
+  partial screen refresh, and real-world dashboard layout.
 
