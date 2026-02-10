@@ -59,6 +59,9 @@ This library includes several ready-to-use examples to help you get started quic
 - **Scroll_and_Autoscroll**  
   - Demonstrates display scrolling, text direction control,  
   and autoscroll behavior using standard LiquidCrystal APIs.
+- **Scroll_with_ProgressBar**  
+  Showcase example combining scrolling text and a smooth  
+  custom-character progress bar using non-blocking updates.
 
 
 You can access these examples from Arduino IDE:
