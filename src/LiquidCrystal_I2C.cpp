@@ -27,6 +27,15 @@ void LiquidCrystal_I2C::setAddress(uint8_t addr) {
 #endif
 }
 
+void LiquidCrystal_I2C::createChar(uint8_t location, uint8_t charmap[]) {
+    location &= 0x7; // hanya 0–7 (CGRAM limit)
+    _command(LCD_SETCGRAMADDR | (location << 3));
+
+    for (uint8_t i = 0; i < 8; i++) {
+        write(charmap[i]);
+    }
+}
+
 uint8_t LiquidCrystal_I2C::getAddress() {
     return _addr;
 }
