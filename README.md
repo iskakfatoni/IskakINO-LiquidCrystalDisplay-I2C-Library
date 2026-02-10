@@ -62,7 +62,9 @@ This library includes several ready-to-use examples to help you get started quic
 - **Scroll_with_ProgressBar**  
   Showcase example combining scrolling text and a smooth  
   custom-character progress bar using non-blocking updates.
-
+- **Ticker_Text**  
+  Demonstrates a smooth, non-blocking running text (ticker)  
+  without using display clear or blocking delays.
 
 You can access these examples from Arduino IDE:
 
