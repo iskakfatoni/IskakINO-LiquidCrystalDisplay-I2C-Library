@@ -11,17 +11,7 @@
 #define LCD_ENABLE_SERIAL_DEBUG 0
 #endif
 
-#define LCD_ENTRYLEFT     0x02
 #define LCD_ENTRYSHIFTDECREMENT 0x00
-
-#define LCD_DISPLAYON     0x04
-#define LCD_CURSOROFF    0x00
-#define LCD_BLINKOFF     0x00
-
-#define LCD_4BITMODE      0x00
-#define LCD_2LINE         0x08
-#define LCD_5x8DOTS       0x00
-
 /* =========================================================
    PCF8574 pin mapping
    ========================================================= */
