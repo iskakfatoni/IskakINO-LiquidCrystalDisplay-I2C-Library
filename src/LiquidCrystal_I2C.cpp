@@ -42,7 +42,7 @@ void LiquidCrystal_I2C::createChar(uint8_t location, const uint8_t charmap[]) {
 }
 
 void LiquidCrystal_I2C::begin() {
-
+    if (_initialized) return;
     Wire.begin();
     Wire.setClock(100000);   // Stabil untuk LCD I2C
 
@@ -75,6 +75,7 @@ void LiquidCrystal_I2C::begin() {
     _command(LCD_ENTRYMODESET | _displaymode);
 
     home();
+    _initialized = true;
 }
 
 void LiquidCrystal_I2C::clear() {
