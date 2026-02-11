@@ -10,6 +10,7 @@ LiquidCrystal_I2C::LiquidCrystal_I2C(uint8_t cols, uint8_t rows)
       _rows(rows),
       _addr(0x00),
       _backlight(true),
+      _initialized(false), 
       _displayfunction(LCD_4BITMODE | LCD_1LINE | LCD_5x8DOTS),
       _displaycontrol(0),
       _displaymode(0)
