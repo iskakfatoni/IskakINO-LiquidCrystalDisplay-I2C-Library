@@ -198,14 +198,6 @@ This library follows **Semantic Versioning**:
 MAJOR.MINOR.PATCH
 ```
 
-## 🏷 Versioning
-
-This library follows **Semantic Versioning**:
-
-```
-MAJOR.MINOR.PATCH
-```
-
 ### 📌 Current Version
 
 &nbsp;&nbsp;&nbsp;&nbsp;**v1.0.0**
