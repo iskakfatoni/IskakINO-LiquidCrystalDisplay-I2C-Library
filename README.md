@@ -177,9 +177,7 @@ Library ini mengikuti standar **Semantic Versioning**:
 
 ---
 ### 📌 Current Version
-
 &nbsp;&nbsp;&nbsp;&nbsp;**v1.0.0**
-
 &nbsp;&nbsp;&nbsp;&nbsp;- Initial stable release  
 &nbsp;&nbsp;&nbsp;&nbsp;- Backward compatible API  
 &nbsp;&nbsp;&nbsp;&nbsp;- Automatic I2C address detection  
@@ -189,12 +187,21 @@ Library ini mengikuti standar **Semantic Versioning**:
 &nbsp;&nbsp;&nbsp;&nbsp;- No breaking changes will be introduced within the 1.x series.
 
 ---
-## 📜 License
+## 🤝 Kontribusi (Contributing)
+Kontribusi selalu terbuka bagi siapa saja! Jika Anda menemukan bug atau memiliki ide fitur baru, silakan:
+1. **Fork** repository ini.
+2. Buat branch baru (`git checkout -b fitur-baru`).
+3. Lakukan **Commit** perubahan Anda (`git commit -m 'Menambah fitur X'`).
+4. **Push** ke branch tersebut (`git push origin fitur-baru`).
+5. Buat **Pull Request**.
+Kami sangat menghargai masukan untuk pengembangan library **IskakINO** agar lebih baik lagi bagi komunitas Maker di Indonesia.
 
-This library is released under the **MIT License**.
+---
+## 📄 Lisensi (License)
+Library ini didistribusikan di bawah **Lisensi MIT**. Anda bebas menggunakan, memodifikasi, dan membagikan library ini baik untuk proyek hobi maupun komersial selama tetap menyertakan atribusi penulis asli.
+Copyright (c) 2026 **Iskak Fatoni**
 
-You are free to:
-- Use  
-- Modify  
-- Distribute  
-As long as the original copyright notice is retained.
+---
+## ☕ Dukungan
+Jika library ini membantu proyek Anda, jangan ragu untuk memberikan **Star ⭐** pada repository ini atau bagikan ke teman-teman sesama pengembang. Dukungan Anda sangat berarti untuk pengembangan library gratis lainnya di masa depan!
+**Happy Coding! 🚀**
