@@ -2,14 +2,22 @@ name: Arduino CI
 
 on:
   push:
+    paths:
+      - 'src/**'
+      - 'examples/**'
+      - 'library.properties'
+      - 'keywords.txt'
   pull_request:
+    paths:
+      - 'src/**'
+      - 'examples/**'
+      - 'library.properties'
+      - 'keywords.txt'
 
 jobs:
-
   lint:
     name: Arduino Lint
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -24,14 +32,13 @@ jobs:
     name: Compile Examples
     runs-on: ubuntu-latest
     needs: lint
-
     strategy:
       fail-fast: false
       matrix:
         board:
-          - arduino:avr:uno
-          - esp32:esp32:esp32
-          - esp8266:esp8266:nodemcuv2
+          - "arduino:avr:uno"
+          - "esp32:esp32:esp32"
+          - "esp8266:esp8266:nodemcuv2"
 
     steps:
       - name: Checkout repository
@@ -58,14 +65,15 @@ jobs:
       - name: Compile examples
         run: |
           echo "Board: ${{ matrix.board }}"
+          # Cari semua file .ino di folder examples
           for example in $(find examples -name "*.ino"); do
-
-            # Skip ESP32-specific example for non-ESP32 boards
+            
+            # Skip contoh spesifik ESP32 jika board bukan ESP32
             if [[ "$example" == *ESP32_Custom_I2C_Pins* ]] && [[ "${{ matrix.board }}" != "esp32:esp32:esp32" ]]; then
               echo "Skipping $example (ESP32 only)"
               continue
             fi
 
-            echo "Compiling $example"
-            arduino-cli compile --fqbn ${{ matrix.board }} --library . $example
+            echo "Compiling $example..."
+            arduino-cli compile --fqbn ${{ matrix.board }} --library . "$example"
           done
