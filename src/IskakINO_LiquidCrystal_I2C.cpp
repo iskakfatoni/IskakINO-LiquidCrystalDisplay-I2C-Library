@@ -273,6 +273,6 @@ void LiquidCrystal_I2C::typewriter(String text, int row, int delayTime) {
  * Mengecek apakah LCD masih terhubung di jalur I2C
  */
 bool LiquidCrystal_I2C::isConnected() {
-  Wire.beginTransmission(_Addr);
+  Wire.beginTransmission(_addr); // Benar (a kecil)
   return (Wire.endTransmission() == 0);
 }
