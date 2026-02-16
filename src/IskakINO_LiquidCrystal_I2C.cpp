@@ -244,3 +244,35 @@ void LiquidCrystal_I2C::_scanAddress() {
     Serial.println(F("[LCD] I2C device NOT found"));
 #endif
 }
+
+/**
+ * Menampilkan teks tepat di tengah layar secara otomatis
+ */
+void LiquidCrystal_I2C::printCenter(String text, int row) {
+  int len = text.length();
+  int pos = (_cols - len) / 2;
+  if (pos < 0) pos = 0; // Jaga-jaga jika teks lebih panjang dari kolom
+  setCursor(pos, row);
+  print(text);
+}
+
+/**
+ * Menampilkan teks dengan efek mengetik (per karakter)
+ */
+void LiquidCrystal_I2C::typewriter(String text, int row, int delayTime) {
+  setCursor(0, row);
+  for (int i = 0; i < text.length(); i++) {
+    if (i < _cols) { // Batasi agar tidak meluap dari jumlah kolom
+      print(text[i]);
+      delay(delayTime);
+    }
+  }
+}
+
+/**
+ * Mengecek apakah LCD masih terhubung di jalur I2C
+ */
+bool LiquidCrystal_I2C::isConnected() {
+  Wire.beginTransmission(_Addr);
+  return (Wire.endTransmission() == 0);
+}
