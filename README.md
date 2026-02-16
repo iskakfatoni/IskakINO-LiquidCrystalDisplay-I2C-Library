@@ -6,7 +6,6 @@
 ![Version](https://img.shields.io/github/v/release/iskakfatoni/IskakINO_LiquidCrystal_I2C?color=blue)
 [![CI](https://github.com/iskakfatoni/IskakINO_LiquidCrystal_I2C/actions/workflows/arduino-ci.yml/badge.svg)](https://github.com/iskakfatoni/IskakINO_LiquidCrystal_I2C/actions)
 
-
 LiquidCrystal I2C library for **HD44780 LCD** using **PCF8574 I2C expander**  
 with **automatic I2C address detection**.
 
