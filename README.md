@@ -122,12 +122,10 @@ Library ini menyediakan pembelajaran bertahap dari tingkat dasar hingga mahir. A
 
 ---
 ### 🚀 Cara Menjalankan Contoh
-
 1. **Instalasi**: Pastikan folder library `IskakINO_LiquidCrystal_I2C` sudah berada di dalam folder `libraries` Arduino Anda.
 2. **Buka IDE**: Jalankan Arduino IDE.
 3. **Pilih Contoh**: Klik menu **File** > **Examples** > **IskakINO_LiquidCrystal_I2C**.
 4. **Upload**: Pilih contoh (mulai dari `01_HelloWorld`), lalu klik tombol **Upload**.
-
 > **Catatan Hardware:**
 > - Untuk **Arduino Uno**, sambungkan SDA ke `A4` dan SCL ke `A5`.
 > - Untuk **ESP32**, pin default adalah `GPIO 21 (SDA)` dan `GPIO 22 (SCL)`.
@@ -161,31 +159,16 @@ lcd.scrollDisplayLeft() / lcd.scrollDisplayRight()
 Catatan: Panggilan API lama (Legacy) tetap berfungsi penuh tanpa memerlukan modifikasi pada sketsa Anda.
 
 ---
-## 🏷 Versi (Versioning)
-
-Library ini mengikuti standar **Semantic Versioning**:
-`MAJOR.MINOR.PATCH`
-
-📌 **Versi Saat Ini: v1.0.0**
-
-* **Rilis Stabil Awal**: Versi pertama yang siap digunakan untuk produksi.
-* **Kompatibilitas Penuh**: Mendukung API standar `LiquidCrystal_I2C` (Backward Compatible).
-* **Deteksi Otomatis**: Fitur pemindaian alamat I2C tanpa input manual.
-* **Dukungan Karakter Kustom**: Membuat simbol dan ikon buatan sendiri.
-* **Kontrol Penuh**: Pengaturan teks berjalan (*scroll*), kursor, dan kedipan (*blink*).
-* **Contoh Lengkap**: Dilengkapi dengan contoh *progress bar* dan jam digital.
-* **Komitmen Stabilitas**: Tidak akan ada perubahan drastis (*breaking changes*) pada seri versi 1.x.
-
----
-### 📌 Current Version
-&nbsp;&nbsp;&nbsp;&nbsp;**v1.0.0**
-&nbsp;&nbsp;&nbsp;&nbsp;- Initial stable release  
-&nbsp;&nbsp;&nbsp;&nbsp;- Backward compatible API  
-&nbsp;&nbsp;&nbsp;&nbsp;- Automatic I2C address detection  
-&nbsp;&nbsp;&nbsp;&nbsp;- Custom character support  
-&nbsp;&nbsp;&nbsp;&nbsp;- Scroll, cursor & blink control  
-&nbsp;&nbsp;&nbsp;&nbsp;- Advanced dashboard & progress bar examples  
-&nbsp;&nbsp;&nbsp;&nbsp;- No breaking changes will be introduced within the 1.x series.
+## 🏷 Riwayat Versi (Versioning)
+Library ini mengikuti standar **[Semantic Versioning](https://semver.org/)** (`MAJOR.MINOR.PATCH`).
+| Versi | Status | Deskripsi Perubahan |
+|:---:|:---:|:---|
+| **v1.0.1** | **Latest** | **Smart UX Update**: Penambahan fungsi `printCenter()`, `typewriter()`, `isConnected()`, dan perbaikan stabilitas compile pada ESP8266. |
+| **v1.0.0** | Stable | **Initial Release**: Fitur Auto-Address, dukungan karakter kustom, dan kompatibilitas penuh dengan API LiquidCrystal_I2C standar. |
+### ✅ Komitmen Stabilitas
+* **Backward Compatibility**: API standar akan selalu didukung untuk memastikan proyek lama Anda tetap berjalan.
+* **No Breaking Changes**: Tidak akan ada perubahan drastis pada fungsi inti dalam seri versi `1.x.x`.
+* **Cross-Platform**: Setiap rilis divalidasi via GitHub Actions untuk Arduino Uno, ESP32, dan ESP8266.
 
 ---
 ## 🤝 Kontribusi (Contributing)
